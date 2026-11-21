@@ -3,12 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimax Tic-Tac-Toe</title>
+  <title>Minimax AI | Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="container">
-    <h1>Minimax AI</h1>
+    <header>
+      <h1>Minimax AI</h1>
+      <div class="controls">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="impossible" selected>Impossible</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="scoreboard">
+      <div class="score-box x-score">
+        <span>YOU (X)</span>
+        <strong id="playerScore">0</strong>
+      </div>
+      <div class="score-box draw-score">
+        <span>DRAWS</span>
+        <strong id="drawScore">0</strong>
+      </div>
+      <div class="score-box o-score">
+        <span>AI (O)</span>
+        <strong id="aiScore">0</strong>
+      </div>
+    </div>
+
     <p id="status">Your turn (X)</p>
 
     <div class="board" id="board">
@@ -23,7 +49,10 @@
       <div class="cell" data-index="8"></div>
     </div>
 
-    <button id="restartBtn">Restart Game</button>
+    <div class="actions">
+      <button id="restartBtn">New Round</button>
+      <button id="resetScoreBtn" class="secondary">Reset Scores</button>
+    </div>
   </main>
 
   <script src="script.js"></script>
